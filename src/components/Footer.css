@@ -1,0 +1,74 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+.footer {
+    background-color: #151111;
+    color: white;
+    padding: 40px 60px;
+    font-family: 'Calvin-Heavy', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.footer-left {
+    max-width: 50%;
+}
+
+.logo-footer {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.footer-left p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-left hr {
+    margin: 20px 0;
+    border-color: #555;
+}
+
+.footer-left nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 10px;
+    letter-spacing: 1px;
+}
+
+.divider {
+    margin: 0 5px;
+    color: #999;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.icon-box {
+    background-color: #b89664;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.icon-box:hover {
+    background-color: #916d37;
+}

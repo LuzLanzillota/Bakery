@@ -21,7 +21,7 @@ function ItemListContainer() {
                 setFilteredProducts(products);
             }
             setLoading(false);
-        }, 1000);
+        }, 1500);
     }, [catid]);
 
 

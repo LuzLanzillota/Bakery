@@ -54,3 +54,50 @@
     color: #c42126;
     cursor: pointer;
 }
+/* Escritorio chico (desde 1024px hasta 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .navbar-container {
+        padding: 15px 30px;
+    }
+
+    .nav-links li {
+        padding: 0 20px;
+    }
+
+    .nav-links li a,
+    .search-icon {
+        font-size: 1.1rem;
+    }
+}
+
+/* Escritorio mediano (1280px hasta 1439px) */
+@media (min-width: 1280px) and (max-width: 1439px) {
+    .navbar-container {
+        padding: 15px 50px;
+    }
+
+    .nav-links li {
+        padding: 0 25px;
+    }
+
+    .nav-links li a,
+    .search-icon {
+        font-size: 1.2rem;
+    }
+}
+
+/* Escritorio grande (1440px hasta 1919px) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .navbar-container {
+        padding: 20px 70px;
+    }
+
+    .nav-links li {
+        padding: 0 30px;
+    }
+
+    .nav-links li a,
+    .search-icon {
+        font-size: 1.3rem;
+    }
+}
