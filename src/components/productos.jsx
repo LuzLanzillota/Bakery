@@ -20,7 +20,9 @@ function Productos(params) {
                 <div className="image-1">
                     <img src="\images\NuestrosProductos_Productos.png" alt="" />
                 </div>
+                <div className="productos">
                 <ItemListContainer />
+                </div>
                 <Footer />
             </div>
         </>

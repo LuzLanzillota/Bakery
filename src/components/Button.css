@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
 button {
-    font-family: Jost;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color: #FFFFFF;
     background-color: #E92E3B;
@@ -8,14 +10,18 @@ button {
     padding: 0px 20px;
     border-radius: 20px;
     font-size: 16px;
-    margin: auto 20px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     position: absolute;
     top: 185%;
     left: 51%;
-
+    transform: translate(2%, 20%);
+    /* Centrado de texto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 button:hover {
     background-color: #ae000c;
