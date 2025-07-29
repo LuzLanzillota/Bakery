@@ -43,9 +43,8 @@ function Novedades(params) {
                     </Link>
                 </div>
                 <div className="image-8">
-                    <img src="./images/Group 883.png" alt="Imagen artículo" />
                     <Link to="/celiacos">
-                        <Button>LEER ARTÍCULO</Button>
+                    <img src="./images/Group 883.png" alt="Imagen artículo" />
                     </Link>
                 </div>
                 <Footer />

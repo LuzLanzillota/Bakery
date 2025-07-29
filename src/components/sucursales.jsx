@@ -15,6 +15,7 @@ function Sucursales(params) {
         <>
             {showLoader && <Loader />}
             <div>
+            <div>
                 <div className="image-5">
                     <img src="\images\SucursalesBakery.png" alt="imagen pricipal de sucursales" />
                 </div>
@@ -25,9 +26,10 @@ function Sucursales(params) {
                     <img src="\images\mapa.png" alt="" />
                 </div>
                 <div className="image-1">
-                    <img src="\images\NuestroProceso.png" alt="" />
+                    <img src="\images\NuestroProceso.png" className="proceso" alt="" />
                 </div>
                 <Footer />
+            </div>
             </div>
         </>
     );
