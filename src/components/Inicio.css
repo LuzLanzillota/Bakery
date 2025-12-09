@@ -13,3 +13,28 @@
     padding: 0%;
     width: 100%;
 }
+
+/* ---- Breakpoints ---- */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .image-2 img {
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .image-1 img,
+  .image-3 img {
+    width: 100%;
+  }
+
+  .image-2 img {
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}

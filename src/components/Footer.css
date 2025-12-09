@@ -72,3 +72,49 @@
 .icon-box:hover {
     background-color: #916d37;
 }
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .footer-content {
+    text-align: center;
+    display: contents;
+}
+
+    .footer-left {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .footer-left p {
+    margin: 0;
+    font-size: 12px;
+}
+
+    .footer-right {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .footer-right p {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.footer-left hr {
+    margin: 5px 0;
+    border-color: #555;
+}
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .icon-box {
+        font-size: 12px;
+        padding: 6px 6px;
+    }
+}

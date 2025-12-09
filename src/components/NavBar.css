@@ -1,9 +1,12 @@
+/* NAVBAR DESKTOP */
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: white;
     padding: 15px 30px;
+    position: relative;
+    z-index: 10;
 }
 
 .logo {
@@ -54,50 +57,80 @@
     color: #c42126;
     cursor: pointer;
 }
-/* Escritorio chico (desde 1024px hasta 1279px) */
-@media (min-width: 1024px) and (max-width: 1279px) {
-    .navbar-container {
-        padding: 15px 30px;
-    }
 
-    .nav-links li {
-        padding: 0 20px;
-    }
-
-    .nav-links li a,
-    .search-icon {
-        font-size: 1.1rem;
-    }
+/* ICONO HAMBURGUESA */
+.hamburger {
+    display: none;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
 }
 
-/* Escritorio mediano (1280px hasta 1439px) */
-@media (min-width: 1280px) and (max-width: 1439px) {
-    .navbar-container {
-        padding: 15px 50px;
-    }
-
-    .nav-links li {
-        padding: 0 25px;
-    }
-
-    .nav-links li a,
-    .search-icon {
-        font-size: 1.2rem;
-    }
+.hamburger img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-/* Escritorio grande (1440px hasta 1919px) */
-@media (min-width: 1440px) and (max-width: 1919px) {
+/* ========== MOBILE ========== */
+@media (max-width: 768px) {
+
     .navbar-container {
-        padding: 20px 70px;
+        padding: 12px 20px;
+        display: flex;
+        justify-content: space-between; /* Logo izquierda, hamburguesa derecha */
+        align-items: center;
+        flex-direction: row;
+    }
+
+    /* Ocultar menú desktop */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 100%;      /* Bajo el navbar */
+        left: 0;
+        padding: 20px 0;
+        text-align: center;
+        gap: 20px;
+        border-top: 1px solid #e0a4a4;
+
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: 0.3s ease;
+        z-index: 9;
+    }
+
+    .nav-links.open {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .nav-links li {
-        padding: 0 30px;
+        padding: 10px 0;
     }
 
-    .nav-links li a,
+    .nav-links li a {
+        font-size: 1rem;
+    }
+
+    .nav-links li:not(:last-child)::after {
+        display: none;
+    }
+
+    /* Mostrar hamburguesa */
+    .hamburger {
+        display: block;
+    }
+
     .search-icon {
-        font-size: 1.3rem;
+        display: none;
+    }
+
+    .navbar {
+        display: none; /* Se oculta el contenedor del desktop */
     }
 }
