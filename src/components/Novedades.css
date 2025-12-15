@@ -96,3 +96,36 @@
     }
 
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .novedades {
+        font-size: 32px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .card-card {
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .card-item {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .card-item img {
+        height: 200px;
+    }
+
+    .card-item p {
+        font-size: 0.95rem;
+        padding: 0.8rem;
+    }
+
+    .image-8 img {
+        width: 90%;
+    }
+}

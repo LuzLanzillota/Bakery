@@ -1,16 +1,18 @@
-import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 import "./NavBar.css";
 
 function NavBar() {
-  const [isOpen, setIsOpen] = useState(false);
+
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setMenuOpen(!menuOpen);
   };
 
   return (
     <header className="navbar-container">
+
       <div className="logo-container">
         <Link to="/">
           <img
@@ -21,19 +23,19 @@ function NavBar() {
         </Link>
       </div>
 
-      {/* Botón hamburguesa */}
       <button className="hamburger" onClick={toggleMenu}>
         <span className="material-icons">dehaze</span>
       </button>
 
-      <nav className={`navbar ${isOpen ? "open" : ""}`}>
+      <nav className={`navbar ${menuOpen ? "open" : ""}`}>
         <ul className="nav-links">
-          <li><NavLink to="/" onClick={() => setIsOpen(false)}>Inicio</NavLink></li>
-          <li><NavLink to="/productos" onClick={() => setIsOpen(false)}>Productos</NavLink></li>
-          <li><NavLink to="/sucursales" onClick={() => setIsOpen(false)}>Sucursales</NavLink></li>
-          <li><NavLink to="/novedades" onClick={() => setIsOpen(false)}>Novedades</NavLink></li>
+          <li><NavLink to="/" onClick={() => setMenuOpen(false)}>Inicio</NavLink></li>
+          <li><NavLink to="/productos" onClick={() => setMenuOpen(false)}>Productos</NavLink></li>
+          <li><NavLink to="/sucursales" onClick={() => setMenuOpen(false)}>Sucursales</NavLink></li>
+          <li><NavLink to="/novedades" onClick={() => setMenuOpen(false)}>Novedades</NavLink></li>
         </ul>
       </nav>
+
     </header>
   );
 }
