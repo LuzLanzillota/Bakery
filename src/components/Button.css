@@ -14,7 +14,7 @@ button {
     transition: background-color 0.3s ease-in-out;
     position: absolute;
     top: 185%;
-    left: 51%;
+    left: 80%;
     transform: translate(2%, 20%);
     /* Centrado de texto */
     display: flex;

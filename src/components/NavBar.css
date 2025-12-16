@@ -1,63 +1,110 @@
+/* ===============================
+   BASE / DESKTOP
+================================ */
+
 .navbar-container { 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
     background-color: white; 
-    padding: 15px 30px; }
+    padding: 15px 30px; 
+}
 
 .logo { 
     height: 60px; 
-    object-fit: contain; }
+    object-fit: contain; 
+}
 
 .navbar { 
     display: flex; 
-    align-items: center; }
+    align-items: center; 
+}
 
 .nav-links { 
     display: flex; 
     list-style: none; 
     margin: 0; 
-    padding: 0; }
+    padding: 0; 
+}
 
 .nav-links li { 
     padding: 0 20px; 
     position: relative; 
     display: flex; 
-    align-items: center; }
+    align-items: center; 
+}
 
 .nav-links li:not(:last-child)::after { 
     content: ""; 
     position: absolute; 
     right: 0; 
     height: 100%; 
-    width: 1px; }
+    width: 1px; 
+}
 
 .nav-links li a { 
     text-decoration: none; 
     font-weight: bold; 
     color: #c42126; 
-    font-size: 1.2rem; }
+    font-size: 1.2rem; 
+}
 
 .search-icon { 
     padding-left: 30px; 
     margin-left: 30px; 
     font-size: 1.2rem; 
     color: #c42126; 
-    cursor: pointer; }
+    cursor: pointer; 
+}
 
-/* Escritorio chico (desde 1024px hasta 1279px) */ 
-@media (min-width: 1024px) and (max-width: 1279px) { 
-    .navbar-container { 
-        padding: 15px 30px; }
-    
-    .nav-links li { 
-        padding: 0 20px; }
 
-    .nav-links li a, .search-icon { 
-        font-size: 1.1rem; }
-    } 
+/* ===============================
+   HAMBURGER (BASE)
+================================ */
 
-/* Escritorio mediano (1280px hasta 1439px) */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    margin: 0;
+    z-index: 1100;
+}
+
+
+
+.hamburger:hover {
+    background-color: #e91313;
+    border: #e91313;
+}
+
+.hamburger .material-symbols-outlined,
+.hamburger .material-icons,
+.hamburger .hamburger-icon {
+    font-size: 30px;
+    color: #000;
+    line-height: 1;
+    display: block;
+    height: 40px;
+}
+
+  
+/* ===============================
+   DESKTOP BREAKPOINTS
+================================ */
+
+/* 1024px – 1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .nav-links li a,
+    .search-icon {
+        font-size: 1.1rem;
+    }
+}
+
+/* 1280px – 1439px */
 @media (min-width: 1280px) and (max-width: 1439px) {
     .navbar-container { 
         padding: 15px 50px; 
@@ -65,163 +112,117 @@
 
     .nav-links li { 
         padding: 0 25px; 
-    } 
-    
-    .nav-links li a, .search-icon { 
-        font-size: 1.2rem; 
-    } 
-
     }
+}
 
-/* Escritorio grande (1440px hasta 1919px) */
- @media (min-width: 1440px) and (max-width: 1919px) { 
+/* 1440px – 1919px */
+@media (min-width: 1440px) and (max-width: 1919px) {
     .navbar-container { 
         padding: 20px 70px; 
-    } 
-    
+    }
+
     .nav-links li { 
         padding: 0 30px; 
-    } 
-    
-    .nav-links li a, .search-icon { 
-        font-size: 1.3rem; 
-    } 
+    }
 
-}
-
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  margin: 0;               
-  z-index: 1100;
-}
-.hamburger:hover{
-  background-color: #e91313;
-  border: #e91313;
+    .nav-links li a,
+    .search-icon {
+        font-size: 1.3rem;
+    }
 }
 
 
-.hamburger .material-symbols-outlined,
-.hamburger .material-icons,
-.hamburger .hamburger-icon {
-  font-size: 30px;
-  color: rgb(0, 0, 0);
-  line-height: 1;
-  display: block;
-  height: 40px;
-}
+/* ===============================
+   MOBILE
+================================ */
 
 @media (max-width: 827px) {
 
-  .hamburger {
-    display: block;
-    position: absolute;
-    margin-left: 30%;        
-    top: 50%;
-    transform: translateY(-50%);
+    header {
+        position: relative;
+        padding: 0 1rem;
+    }
 
-   
-  }
+    .logo img,
+    .logo-container img {
+        height: 65px;
+        width: auto;
+        display: block;
+    }
 
-  
-  header { position: relative; }
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 0rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #000;
+        flex-direction: column;
+        display: none;
+        z-index: 999;
+    }
 
-  .logo img,
-  .logo-container img {
-    height: 56px;
-  }
+    .navbar ul {
+        display: none;
+    }
 
-  .navbar.open {
-    padding-top: 12px; 
-  }
+    .navbar.open {
+        display: flex;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        padding-top: 12px;
+    }
+
+    .navbar.open ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 3px;
+        padding: 10px 20px;
+    }
+
+    .navbar.open ul li {
+        width: 100%;
+    }
+
+    .navbar.open ul li a {
+        display: block;
+        font-size: 1rem;
+        color: #fff;
+    }
+
+    .navbar.open::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 6px;
+        width: 100%;
+        opacity: 0.06;
+        pointer-events: none;
+    }
 }
 
-@media (max-width: 827px) {
 
-  
-  header {
-    padding: 0 1rem;
-  }
-
-  .logo img,
-  .logo-container img {
-    height: 65px;
-    width: auto;
-    display: block;
-  }
-
-  .hamburger {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  .navbar ul {
-    display: none; 
-  }
-
-  
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #000;
-    flex-direction: column;
-    padding: 0;        
-    display: none;
-    z-index: 999;
-  }
-
-  .navbar.open {
-    display: flex;
-  }
-
-  .navbar.open ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: center;
-    gap: 3px;
-    padding: 10px 20px;
-  }
-
-  .navbar.open ul li {
-    width: 100%;
-    
-  }
-
-  .navbar.open ul li a {
-    display: block;
-    font-size: 1 rem;
-    color: #fff;
-    
-  }
-
-  .navbar.open {
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
-  }
-
-  .navbar.open::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 6px;
-    width: 100%;
-    opacity: 0.06;
-    pointer-events: none;
-  }
-}
+/* ===============================
+   DESKTOP FORZADO
+================================ */
 
 @media (min-width: 828px) {
-  .hamburger { display: none; }
-  .navbar { position: static; display: flex !important; }
-  .navbar ul { display: flex !important; flex-direction: row; gap: 2rem; padding: 0; margin: 0; }
+    .hamburger { display: none; }
+    .navbar { position: static; display: flex !important; }
+    .navbar ul {
+        display: flex !important;
+        flex-direction: row;
+        gap: 2rem;
+        padding: 0;
+        margin: 0;
+    }
 }
